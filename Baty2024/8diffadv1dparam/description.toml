@@ -1,0 +1,15 @@
+
+
+brief = "1D diffusion-advection equation"
+description = """
+
+"x; u"
+parameters: c, mu,
+c = 1
+source term S = 1
+
+-c*u_xx + mu*u_x = 1
+
+"""
+
+

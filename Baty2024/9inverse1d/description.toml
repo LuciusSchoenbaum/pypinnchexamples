@@ -1,0 +1,25 @@
+
+
+
+
+brief = "1D diffusion-advection equation, inverse solution"
+description = """
+
+"x; u, mu"
+parameters: c, mu,
+c = 1
+source term S = 1
+
+-c*u_xx + mu*u_x = 1
+
+Note: we solve using a different method than Baty does.
+Still a work in progress.
+
+"""
+reminder = """
+Pls do not edit 1minimalexample, it is 'done'.
+"""
+
+
+
+

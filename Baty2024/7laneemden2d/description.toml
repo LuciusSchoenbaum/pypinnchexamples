@@ -1,0 +1,58 @@
+
+brief = "Lane-Emden (LE) equations of astrophysics and relativistic mechanics"
+description = """
+
+Lane-Emden equation ∆ psi + psi^n = omega, where ∆ is the spherical Laplacian.
+
+example 1:
+
+labels "x, y; u"
+parameters: a, b (real shape parameters)
+source function: f(u, x, y)
+
+u_xx + a/x*u_x + u_yy + b/y*u_y = f(u, x, y)
+
+solve with PINN using
+
+x*y*u_xx + a*y*u_x + x*y*u_yy + b*x*u_y = f(u, x, y)
+
+a = b = 2
+f = 6*(2 + x*x + y*y)
+ ... u = (1+x*x)*(1+y*y) exact
+x = 0..2
+y = -1..1
+
+Following Baty, using the exact solution, we check three different BCs:
+(1) Cauchy left, right; None top, bottom
+(2) Cauchy right; None left, top, bottonm
+(3) Cauchy left, right; Neumann top, bottom
+
+example 2 ('physical'):
+
+labels "r, theta; psi"
+parameters n, omega
+
+psi_rr + 2/r psi_r + 1/r^2 psi_thetatheta + 1/(r^2 tan theta) psi_theta + psi^n = omega
+
+Case n=1, omega = 0 gives analytic solution
+psi = sin(r)/r
+
+r = 0..2pi
+theta = 0..pi
+
+BC's: Cauchy left; Neumann top bottom; None right
+
+Cf. Baty's comments in conclusion and Baty's references.
+
+"""
+notes = """
+
+"""
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+
+
+brief = "2d Poisson equation test cases"
+description = """
+Nishikawa 2023, Baty 2024
+
+5 cases of f, u.
+3 kinds of boundary conditions.
+
+"""
